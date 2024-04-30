@@ -57,7 +57,7 @@
                     <th scope="row">{{ $zay->id}}</th>
                     <td>{{ $zay->carnum}}</td>
                     <td>{{ $zay->problem}}</td>
-                    <td>{{ $zay->status}}</td>
+                    <td><a href="/zayavka/{{ $zay->id}}">{{ $zay->status}}</a></td>
                 </tr>
                 @endforeach
             </tbody>

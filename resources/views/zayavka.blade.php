@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <h2>Номер машины:</h2>
         <h2>{{$new->carnum}}</h2>
+        <hr>
         <h2>Описание нарушения:</h2>
         <h2>{{$new->problem}}</h2>
+        <hr>
         <h2>Статус заявки:</h2>
         <h2>{{$new->status}}</h2>
-
-        <img src="../{{$new->path}}" alt="" srcset="">
         @if($new->status == 'Новая')
         @if (Auth::user()->role == 'admin')
         <form action="/updateproblem" method="post">
@@ -34,10 +34,14 @@
                     Отклонить
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button type="submit" class="btn btn-primary mb-3">Сохранить</button>
         </form>
         @endif
         @endif
+        <hr>
+
+        <img src="../{{$new->path}}" alt="" srcset="">
+
     </div>
 </div>
 @endsection
