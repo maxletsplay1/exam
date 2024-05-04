@@ -16,25 +16,14 @@
         <form action="/updateproblem" method="post">
             @CSRF
             <input type="hidden" name="id" value="{{$new->id}}">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="status" id="status1" value="Новая" checked>
-                <label class="form-check-label" for="status1">
-                    Новая
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="status" id="status2" value="Подтверждено">
-                <label class="form-check-label" for="status2">
-                    Подтвердить
-                </label>
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="status3" value="Отклонено">
-                <label class="form-check-label" for="status3">
-                    Отклонить
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary mb-3">Сохранить</button>
+            <input type="hidden" name="status" value="Подтверждено">
+            <button type="submit" class="btn btn-success mb-3">Подтвердить</button>
+        </form>
+        <form action="/updateproblem" method="post">
+            @CSRF
+            <input type="hidden" name="id" value="{{$new->id}}">
+            <input type="hidden" name="status" value="Отклонено">
+            <button type="submit" class="btn btn-danger mb-3">Отклонить</button>
         </form>
         @endif
         @endif

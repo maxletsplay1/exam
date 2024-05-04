@@ -30,4 +30,8 @@ class HomeController extends Controller
         $zayavki = problem::where('user_id', $id)->get();
         return view('home', compact('zayavki'));
     }
+    public function form()
+    {
+        return view('form');
+    }
 }

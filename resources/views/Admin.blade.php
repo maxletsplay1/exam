@@ -26,7 +26,7 @@
                     <th scope="row">{{ $zay->id}}</th>
                     <td>{{ $zay->carnum}}</td>
                     <td>{{ $zay->problem}}</td>
-                    <td><a href="/zayavka/{{ $zay->id}}"> <button class="btn btn-outline-info" type="button">Открыть</button></a></td>
+                    <td><a href="/applications/{{ $zay->id}}"> <button class="btn btn-outline-info" type="button">Открыть</button></a></td>
                 </tr>
                 @endforeach
             </tbody>
@@ -42,6 +42,7 @@
                     <th scope="col">Номер машины</th>
                     <th scope="col">Нарушение</th>
                     <th scope="col">Статус заявки</th>
+                    <th scope="col">Действие</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +52,7 @@
                     <td>{{ $zay->carnum}}</td>
                     <td>{{ $zay->problem}}</td>
                     <td>{{ $zay->status}}</td>
+                    <td><a href="/applications/{{ $zay->id}}"> <button class="btn btn-outline-info" type="button">Открыть</button></a></td>
                 </tr>
                 @endforeach
             </tbody>
@@ -65,6 +67,8 @@
                     <th scope="col">Номер машины</th>
                     <th scope="col">Нарушение</th>
                     <th scope="col">Статус заявки</th>
+                    <th scope="col">Действие</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -74,6 +78,8 @@
                     <td>{{ $zay->carnum}}</td>
                     <td>{{ $zay->problem}}</td>
                     <td>{{ $zay->status}}</td>
+                    <td><a href="/applications/{{ $zay->id}}"> <button class="btn btn-outline-info" type="button">Открыть</button></a></td>
+
                 </tr>
                 @endforeach
             </tbody>

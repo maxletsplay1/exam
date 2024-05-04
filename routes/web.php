@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin', [ProblemsController::class, 'index'])->name('admin');
-Route::get('/zayavka/{id}', [ProblemsController::class, 'zayavka'])->name('zayavka');
+Route::get('/applications/{id}', [ProblemsController::class, 'zayavka'])->name('zayavka');
+Route::get('/application/add', [App\Http\Controllers\HomeController::class, 'form'])->name('form');
+
 Route::post('/addproblem', [ProblemsController::class, 'create']);
 Route::post('/updateproblem', [ProblemsController::class, 'update']);
