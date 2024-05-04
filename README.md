@@ -29,7 +29,7 @@ php artisan serve
 php artisan migrate
 ```
 
-Запустите загрузить дамп бд из папки backup
+Загрузить дамп бд из папки backup
 
 Данные пользователей
 
